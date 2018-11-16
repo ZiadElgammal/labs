@@ -1,5 +1,5 @@
  <?php
-
+/// require_once("CRUD_functions.php");
  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 echo "post method<br>";
 $data = json_decode(file_get_contents('php://input'), true);
@@ -11,7 +11,7 @@ $_POST['password'] = $data['password'];
 /// databasr cretantials
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "machine1";
 $dbname = "contacts";
 /// Create connection
 $conn = new mysqli($servername, $username, $password,$dbname);
